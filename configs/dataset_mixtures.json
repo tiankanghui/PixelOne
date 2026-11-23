@@ -1,0 +1,57 @@
+{
+  "schema": "pixelone-dataset-mixtures-v1",
+  "unit": "grounding targets",
+  "control": {
+    "targets": 21557,
+    "screenshots": 1010,
+    "sources": {
+      "ShowUI-web": 14062,
+      "ShowUI-desktop": 7495
+    }
+  },
+  "continuation_200k": {
+    "targets": 200000,
+    "screenshots": 78530,
+    "sources": {
+      "GroundCUA": 140500,
+      "ShowUI-web": 30000,
+      "OS-Atlas Linux": 12000,
+      "OS-Atlas macOS": 6000,
+      "ShowUI-desktop": 1500,
+      "OS-Atlas RICO": 8000,
+      "OS-Atlas UIBert": 2000
+    }
+  },
+  "continuation_500k": {
+    "targets": 500000,
+    "screenshots": 87517,
+    "sources": {
+      "GroundCUA": 350500,
+      "ShowUI-web": 90000,
+      "OS-Atlas Linux": 22000,
+      "OS-Atlas macOS": 13000,
+      "ShowUI-desktop": 1800,
+      "OS-Atlas RICO": 19000,
+      "OS-Atlas UIBert": 3700
+    }
+  },
+  "validation": {
+    "targets": 2000,
+    "screenshots": 1808,
+    "disjoint_from": [
+      "control",
+      "continuation_200k",
+      "continuation_500k"
+    ]
+  },
+  "screening": {
+    "exact_identity": "decoded RGB pixels",
+    "near_duplicate": {
+      "dhash_distance_max": 2,
+      "grayscale_mae_max": 3,
+      "aspect_log_difference_max": 0.02
+    },
+    "group_policy": "Keep each source screenshot and derived crops in the same partition"
+  },
+  "release_scope": "Configuration only; acquire each upstream dataset under its own terms. Counts do not identify exact sampled target IDs."
+}

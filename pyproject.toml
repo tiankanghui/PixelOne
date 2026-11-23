@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pixelone-grounding"
+version = "0.1.0"
+description = "Native-resolution GUI grounding with search distillation and direct pixel prediction"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.11,<2.12", "transformers==5.6.2", "accelerate>=1.10",
+  "safetensors>=0.4", "huggingface-hub>=0.30", "numpy>=1.26,<3",
+  "Pillow>=10", "einops>=0.8", "scipy>=1.12", "packaging>=20",
+]
+
+[project.optional-dependencies]
+native = ["flash-linear-attention==0.4.2", "causal-conv1d==1.7.0"]
+test = ["pytest>=8"]
+
+[project.scripts]
+pixelone = "pixelone.cli:main"
+
+[project.urls]
+Repository = "https://github.com/tiankanghui/PixelOne"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pixelone*", "videojev_hf*"]
+
+[tool.setuptools.package-data]
+pixelone = ["assets/*"]
+
+[tool.setuptools.data-files]
+"share/pixelone-grounding" = ["THIRD_PARTY_NOTICES.md"]
+"share/pixelone-grounding/third_party" = ["third_party/VideoJev-LICENSE", "third_party/VideoJev-NOTICE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
