@@ -1,7 +1,7 @@
 <h3 align="center"><strong><em>PixelOne:</em></strong> From Options to Pixels in a Single Forward for GUI Grounding</h3>
 
 <p align="center">
-  <a href="docs/PixelOne.pdf">Paper</a> ·
+  <a href="https://arxiv.org/abs/2611.30235">Paper</a> ·
   <a href="https://tiankanghui.github.io/PixelOne/">Project page</a> ·
   <a href="https://huggingface.co/KangHui2200/PixelOne">Models</a> /
   <a href="https://huggingface.co/datasets/KangHui2200/PixelOne-Data">Data</a>
@@ -73,3 +73,17 @@ https://github.com/user-attachments/assets/60983252-5735-49be-a389-488aa5f106de
 </p>
 
 The teacher searches through row and column choices. The student inherits its parameters and learns from its spatial distributions. With Top20 supervision, the click-aligned winner loss encourages target pixels to outrank non-target pixels within the same token. At inference, the decision head selects a visual token and a lightweight pixel head selects the click within it, without running the search.
+
+## Citation
+
+```bibtex
+@misc{tian2026pixeloneoptionspixelssingle,
+  title={PixelOne: From Options to Pixels in a Single Forward for GUI Grounding},
+  author={Kanghui Tian and Shuai Dong and Yuhan Zhu and Congcong Wang and Ji Zhao and Tianxiang Jiang and Zhixiong Zhang and Shengyuan Ding and Yi Wang and Jiaqi Wang and Yu Qiao},
+  year={2026},
+  eprint={2611.30235},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2611.30235},
+}
+```

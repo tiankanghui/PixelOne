@@ -12,7 +12,7 @@ Choose the shortest path to your task.
 | Format data and understand the source mixtures | [Dataset configuration](DATASETS.md) |
 | Read or extend the implementation | [Code guide](CODE_GUIDE.md) |
 | Check numerical validation and reproduction scope | [Reproducibility](REPRODUCIBILITY.md) |
-| Read the method and experiments | [Paper PDF](PixelOne.pdf) |
+| Read the method and experiments | [Paper on arXiv](https://arxiv.org/abs/2611.30235) |
 | Watch real browser clicks at 2K and 4K | [Live demos](DEMOS.md) |
 | Review upstream attribution | [Third-party notices](../THIRD_PARTY_NOTICES.md) |
 
